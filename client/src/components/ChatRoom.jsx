@@ -37,7 +37,7 @@ const ChatRoom = () => {
   }
 
   useEffect(() => {
-    socketRef.current = io("https://chat-io-llor.onrender.com/");
+    socketRef.current = io(import.meta.env.VITE_SOCKET_SERVER);
 
     socketRef.current.emit("joinRoom", roomId);
 

@@ -18,8 +18,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-
-export const server = "https://chat-io-llor.onrender.com/api/v1";
+export const server = import.meta.env.VITE_SERVER_VARIABLE;
 
 export const Context = createContext({ isAuthenticated: false });
 
