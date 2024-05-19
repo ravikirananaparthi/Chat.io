@@ -18,15 +18,26 @@ Here are some screenshots of the application:
 
 ### Login Page
 ![Login Page](./client/src/assets/Screenshot%20(155).png)
+
+---
+
 ![Login Page](./client/src/assets/Screenshot%20(157).png)
 
+---
 
 ### Chat Rooms
 ![Chat Rooms](./client/src/assets/Screenshot%20(158).png)
 
+---
+
 ![Chat Rooms](./client/src/assets/Screenshot%20(159).png)
 
+---
+
 ![Chat Rooms](./client/src/assets/Screenshot%20(160).png)
+
+---
+
 
 ## Technologies Used
 
@@ -35,6 +46,7 @@ Here are some screenshots of the application:
 - Authentication: JWT (JSON Web Token)
 - Hosting: Vercel, Render
 - File Storage: Firebase Bucket Storage
+- Security: Sanitize and validate all inputs to prevent XSS and other injection attacks using DOMPurify and Validator.
 
 ## Demo Credentials
 
