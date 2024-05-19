@@ -69,6 +69,8 @@ const ChatRoom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+
+  
   const handleSendMessage = (e) => {
     e.preventDefault();
     let sanitizedMessage = newMessage;
