@@ -29,7 +29,7 @@ try {
 }
 const frontendOrigin = [
   "http://localhost:5173",
-  "https://devfinds-frontend.vercel.app",
+  "https://chat-io-zeta.vercel.app",
 ];
 
 export const io = new Server(server, {
