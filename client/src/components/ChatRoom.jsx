@@ -42,6 +42,7 @@ const ChatRoom = () => {
     socketRef.current.emit("joinRoom", roomId);
 
     socketRef.current.on("message", (message) => {
+      console.log(message);
       setMessages((prevMessages) => [...prevMessages, message]);
     });
 
@@ -75,6 +76,7 @@ const ChatRoom = () => {
     if (newMessage.trim()) {
       if (!validUrl.isUri(newMessage)) {
         sanitizedMessage = DOMPurify.sanitize(newMessage);
+        console.log('hi')
       }
       console.log(sanitizedMessage);
       const message = {
@@ -176,7 +178,7 @@ const ChatRoom = () => {
                   : "chat-bubble-info"
               }`}
             >
-              { (message.content) ? (
+              { validUrl.isUri(message.content) ? (
                 <a
                   href={message.content}
                   target="_blank"
@@ -228,6 +230,7 @@ const ChatRoom = () => {
             <label>
               <input
                 onChange={handleFileUpload}
+                onKeyDown={handleFileUpload}
                 type="file"
                 className="hidden"
               />

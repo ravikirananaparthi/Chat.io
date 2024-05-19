@@ -74,9 +74,11 @@ io.on('connection', (socket) => {
   socket.on('sendMessage', async (message) => {
     if (!validUrl.isUri(message.content)) {
       message.content = validator.escape(message.content);
+
     }
     const newMessage = new Message(message);
     await newMessage.save();
+
     io.to(message.roomId).emit('message', await newMessage.populate('sender', 'name image'));
   });
 
