@@ -28,7 +28,7 @@ export const createRoom = async (req, res) => {
 
 export const getAllRooms = async (req, res) => {
     try {
-        const types = ['open']; // Define the room types to retrieve
+        const types = ['open'];
         const rooms = await Room.find({ roomType: { $in: types } })
             .populate('participants')
             .populate('ownerId')

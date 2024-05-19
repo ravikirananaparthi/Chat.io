@@ -18,7 +18,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-export const server = "http://localhost:4000/api/v1";
+
+export const server = "https://chat-io-llor.onrender.com/api/v1";
 
 export const Context = createContext({ isAuthenticated: false });
 
