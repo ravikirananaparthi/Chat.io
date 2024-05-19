@@ -48,7 +48,7 @@ function Login() {
     },
     user3: {
       email: "harry@gmail.com",
-      password: "Harry1234!",
+      password: "harry",
     },
     user4: {
       email: "michael@gmail.com",
