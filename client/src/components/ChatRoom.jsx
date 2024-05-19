@@ -70,7 +70,7 @@ const ChatRoom = () => {
   }, [messages]);
 
 
-  
+
   const handleSendMessage = (e) => {
     e.preventDefault();
     let sanitizedMessage = newMessage;
@@ -152,7 +152,7 @@ const ChatRoom = () => {
     <div className="flex flex-col h-full bg-gray-900 text-white p-4">
       <div className="fixed top-0 left-0 right-0 md:left-1/3 bg-gray-800 p-4 z-10 flex items-center rounded-tl-3xl rounded-tr-3xl">
         <Link to={"/home"}>
-          <IoIosArrowBack size={30} className="md:hidden" />
+          <IoIosArrowBack size={30} className="" />
         </Link>
         <h2 className="text-xl font-semibold ml-7">{topic}</h2>
       </div>
