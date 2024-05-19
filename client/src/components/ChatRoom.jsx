@@ -37,7 +37,7 @@ const ChatRoom = () => {
   }
 
   useEffect(() => {
-    socketRef.current = io("http://localhost:4000");
+    socketRef.current = io("https://chat-io-llor.onrender.com/");
 
     socketRef.current.emit("joinRoom", roomId);
 
